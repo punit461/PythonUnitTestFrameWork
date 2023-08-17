@@ -1,12 +1,21 @@
-# from Utilities import BaseClass
+from Locators.LoginPageLocators import LPLocators
 from Utilities.Base import BaseClass
 
 
-class LoginPageClass(BaseClass):
+class LoginPage(BaseClass):
+    def __init__(self, driver):
+        super().__init__(driver)
 
-    def test(self):
-        timeout = self.timeout()
-        print(timeout)
+    def enter_username(self, username):
+        self.send_keys(LPLocators.txt_username, username)
 
+    def enter_password(self, password):
+        self.send_keys(LPLocators.txt_password, password)
 
-LoginPageClass.test()
+    def click_login_button(self):
+        self.click_element(LPLocators.btn_login)
+
+    def login(self, username, password):
+        self.enter_username(username)
+        self.enter_password(password)
+        self.click_login_button()

@@ -1,29 +1,40 @@
 import configparser
 
+
 # Initialize the configparser
-config = configparser.ConfigParser()
-config.read("..\Configurations\config.ini")
+class ConfigReader:
+    def __init__(self, config_path='..\Configurations\config.ini'):
+        self.config = configparser.ConfigParser()
+        self.config.read("config_path")
 
-# Read data from the 'URLs' section
-baseEnv = config.get('URLs', 'baseEnv')
-if baseEnv == "testEnv":
-    base_url = config.get('URLs', 'testEnv')
-elif baseEnv == "devEnv":
-    base_url = config.get('URLs', 'devEnv')
-elif baseEnv == "stageEnv":
-    base_url = config.get('URLs', 'stageEnv')
-else:
-    base_url = config.get('URLs', 'prodEnv')
+    def get_value(self, section, option):
+        return self.config.get(section, option)
 
-# Read data from the 'Credentials' section
-username = config.get('Credentials', 'username_admin')
-password = config.get('Credentials', 'password_admin')
+    # Read data from the 'URLs' section
+    def get_baseurl(self):
+        baseEnv = self.get_value('URLs', 'baseEnv')
+        if baseEnv == "testEnv":
+            return self.get_value('URLs', 'testEnv')
+        elif baseEnv == "devEnv":
+            return self.get_value('URLs', 'devEnv')
+        elif baseEnv == "stageEnv":
+            return self.get_value('URLs', 'stageEnv')
+        else:
+            return self.get_value('URLs', 'prodEnv')
 
-# Read the Settings value
-timeout = config.get('Settings', 'default_timeout')
-browser = config.get('Settings', 'default_browser')
+    # Read data from the 'Credentials' section
+    def get_username(self):
+        return self.get_value('Credentials', 'username_admin')
 
-# Print the read values to validate
-# print("Username:", username)
-# print("Password:", password)
-# print("Login URL:", base_url)
+    def get_password(self):
+        return self.get_value('Credentials', 'password_admin')
+
+    # Read the Settings value
+    def get_timeout(self):
+        return self.get_value('Settings', 'default_timeout')
+
+    def get_browser(self):
+        return self.get_value('Settings', 'default_browser')
+
+    def get_browser_headless(self):
+        return self.get_value('Settings', 'headless')

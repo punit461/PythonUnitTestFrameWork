@@ -8,13 +8,22 @@ config.read("..\Configurations\config.ini")
 baseEnv = config.get('URLs', 'baseEnv')
 if baseEnv == "testEnv":
     base_url = config.get('URLs', 'testEnv')
-elif baseEnv == "testEnv":
+elif baseEnv == "devEnv":
+    base_url = config.get('URLs', 'devEnv')
+elif baseEnv == "stageEnv":
+    base_url = config.get('URLs', 'stageEnv')
+else:
+    base_url = config.get('URLs', 'prodEnv')
 
 # Read data from the 'Credentials' section
-username = config.get('Credentials', 'username')
-password = config.get('Credentials', 'password')
+username = config.get('Credentials', 'username_admin')
+password = config.get('Credentials', 'password_admin')
 
-# Print the read values
-print("Username:", username)
-print("Password:", password)
-print("Login URL:", login_url)
+# Read the Settings value
+timeout = config.get('Settings', 'default_timeout')
+browser = config.get('Settings', 'default_browser')
+
+# Print the read values to validate
+# print("Username:", username)
+# print("Password:", password)
+# print("Login URL:", base_url)

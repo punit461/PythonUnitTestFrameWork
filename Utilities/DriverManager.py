@@ -26,14 +26,18 @@ class DriverManager:
 
     def _get_chrome_driver(self):
         chrome_options = ChromeOptions()
-        chrome_options.headless = self.config_reader.get_browser_headless()
+
+        if self.config_reader.get_browser_headless():
+            chrome_options.add_argument('--headless')
 
         service = ChromeService(executable_path=self.config_reader.get_browser_path("chrome"))
         return webdriver.Chrome(service=service, options=chrome_options)
 
     def _get_firefox_driver(self):
         firefox_options = FirefoxOptions()
-        firefox_options.headless = self.config_reader.get_browser_headless()
+
+        if self.config_reader.get_browser_headless():
+            firefox_options.add_argument('--headless')
 
         service = FirefoxService(executable_path=self.config_reader.get_browser_path("firefox"))
         return webdriver.Firefox(service=service, options=firefox_options)
@@ -41,7 +45,9 @@ class DriverManager:
     def _get_edge_driver(self):
         edge_options = EdgeOptions()
         edge_options.use_chromium = True
-        edge_options.headless = self.config_reader.get_browser_headless()
+
+        if self.config_reader.get_browser_headless():
+            edge_options.add_argument('--headless')
 
         service = EdgeService(executable_path=self.config_reader.get_browser_path("edge"))
         return webdriver.Edge(service=service, options=edge_options)

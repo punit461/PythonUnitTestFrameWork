@@ -41,10 +41,10 @@ class ConfigReader:
 
     def get_browser_path(self, browserName):
         if browserName.lower() == 'chrome':
-            return self.get_value('Settings', 'chromeD_path')
+            return self.get_value('Paths', 'chromeD_path')
         elif browserName.lower == 'firefox':
-            return self.get_value('Settings', 'firefoxD_path')
+            return self.get_value('Paths', 'firefoxD_path')
         elif browserName.lower == 'edge':
-            return self.get_value('Settings', 'edgeD_path')
+            return self.get_value('Paths', 'edgeD_path')
         else:
-            return self.get_value('Settings', 'D_path')
+            return self.get_value('Paths', 'D_path')

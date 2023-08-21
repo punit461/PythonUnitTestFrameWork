@@ -39,6 +39,7 @@ class ConfigReader:
     def get_browser_headless(self):
         return self.get_value('Settings', 'headless')
 
+    # should be depricated Since the Selenium manager only manages the driver from Selenium 4.6
     def get_browser_path(self, browserName):
         if browserName.lower() == 'chrome':
             return self.get_value('Paths', 'chromeD_path')

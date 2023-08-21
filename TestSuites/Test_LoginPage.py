@@ -1,3 +1,4 @@
+import tracemalloc
 import unittest
 from Test_Base import TestBase
 from Pages.LoginPageClass import LoginPage
@@ -12,6 +13,7 @@ class TestLoginPage(TestBase):
         login_page.login(username, password)
         print(self.driver.title)
         # Add assertions to verify successful login
+        # print(tracemalloc.take_snapshot().statistics('lineno'))
 
 
 if __name__ == "__main__":

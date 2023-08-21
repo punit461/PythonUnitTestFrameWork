@@ -6,6 +6,7 @@ from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.edge.service import Service as EdgeService
 from selenium.webdriver.edge.options import Options as EdgeOptions
 from Utilities.ConfigReader import ConfigReader
+from selenium.webdriver.common.selenium_manager import SeleniumManager
 
 
 class DriverManager:
@@ -26,28 +27,31 @@ class DriverManager:
 
     def _get_chrome_driver(self):
         chrome_options = ChromeOptions()
+        headless_val = self.config_reader.get_browser_headless().lower()
+        if headless_val in ["yes", "y"]:
+            chrome_options.add_argument('--headless=new')
 
-        if self.config_reader.get_browser_headless():
-            chrome_options.add_argument('--headless')
-
-        service = ChromeService(executable_path=self.config_reader.get_browser_path("chrome"))
+        # service = ChromeService(executable_path=self.config_reader.get_browser_path("chrome"))
+        service = ChromeService()
         return webdriver.Chrome(service=service, options=chrome_options)
 
     def _get_firefox_driver(self):
         firefox_options = FirefoxOptions()
+        headless_val = self.config_reader.get_browser_headless().lower()
+        if headless_val in ["yes", "y"]:
+            firefox_options.add_argument('--headless=new')
 
-        if self.config_reader.get_browser_headless():
-            firefox_options.add_argument('--headless')
-
-        service = FirefoxService(executable_path=self.config_reader.get_browser_path("firefox"))
+        # service = FirefoxService(executable_path=self.config_reader.get_browser_path("firefox"))
+        service = FirefoxService()
         return webdriver.Firefox(service=service, options=firefox_options)
 
     def _get_edge_driver(self):
         edge_options = EdgeOptions()
         edge_options.use_chromium = True
+        headless_val = self.config_reader.get_browser_headless().lower()
+        if headless_val in ["yes", "y"]:
+            edge_options.add_argument('--headless=new')
 
-        if self.config_reader.get_browser_headless():
-            edge_options.add_argument('--headless')
-
-        service = EdgeService(executable_path=self.config_reader.get_browser_path("edge"))
+        # service = EdgeService(executable_path=self.config_reader.get_browser_path("edge"))
+        service = EdgeService()
         return webdriver.Edge(service=service, options=edge_options)

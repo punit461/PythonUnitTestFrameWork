@@ -1,9 +1,10 @@
 import configparser
+from test_suites import project_directory
 
 
 # Initialize the configparser
 class ConfigReader:
-    def __init__(self, config_path='..\Configurations\config.ini'):
+    def __init__(self, config_path=project_directory + '\configurations\config.ini'):
         self.config = configparser.ConfigParser()
         self.config.read(config_path)
 

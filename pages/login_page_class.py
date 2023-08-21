@@ -1,5 +1,5 @@
 from locators.login_page_locators import LPLocators
-from utilities.base import BaseClass
+from utility.base import BaseClass
 
 
 class LoginPage(BaseClass):

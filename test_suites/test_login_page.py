@@ -1,9 +1,7 @@
-import tracemalloc
-
 import unittest
-from test_base import TestBase
+from test_suites.test_base import TestBase
 from pages.login_page_class import LoginPage
-from utilities import html_test_runner
+from utility.html_test_runner import HTMLTestRunner
 
 
 class TestLoginPage(TestBase):
@@ -26,8 +24,8 @@ class TestLoginPage(TestBase):
 
 
 if __name__ == "__main__":
-    fp = file('./reporting/html_reports/', 'wb')
-    runner = HTMLTestRunner.HTMLTestRunner(
+    fp = open('./reporting/html_reports/', 'wb')
+    runner = HTMLTestRunner(
         stream=fp,
         title='Python unittest Framework Report',
         description='This demonstrates the report output by HTMLTestRunner.'

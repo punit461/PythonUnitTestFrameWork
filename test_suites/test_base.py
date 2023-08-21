@@ -1,6 +1,6 @@
 import unittest
-from utilities.driver_manager import DriverManager
-from utilities.config_reader import ConfigReader
+from utility.driver_manager import DriverManager
+from utility.config_reader import ConfigReader
 import tracemalloc
 
 

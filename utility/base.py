@@ -1,16 +1,15 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 import time
-from utilities import config_reader
+from .config_reader import ConfigReader
 
 
 class BaseClass:
 
     def __init__(self, driver):
         self.driver = driver
-        self.config_reader = ConfigReader.ConfigReader()
+        self.config_reader = ConfigReader()
 
     def locate_element(self, locator, timeout=None):
         if timeout is None:

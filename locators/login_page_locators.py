@@ -11,3 +11,6 @@ class LPLocators:
     txt_password = (By.ID, 'Password')
     btn_login = (By.XPATH, "//button[text()='Log in']")
 
+# class HPLocators:
+
+

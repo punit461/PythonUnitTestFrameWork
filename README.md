@@ -39,7 +39,7 @@ _Python_, _Selenium_, _unittest_, _Allure_.
 To run the tests, navigate to the project root directory and execute the following command:
 
 ```bash
-python -m unittest discover test_suites
+python -m unittest discover test_cases
 ```
 ## Reporting
 * HTML reports can be found in the Reporting/HtmlReports directory.

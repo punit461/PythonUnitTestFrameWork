@@ -5,7 +5,7 @@ from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.edge.service import Service as EdgeService
 from selenium.webdriver.edge.options import Options as EdgeOptions
-from .config_reader import ConfigReader
+from utility.config_reader import ConfigReader
 
 
 class DriverManager:

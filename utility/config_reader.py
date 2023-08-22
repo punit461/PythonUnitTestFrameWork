@@ -1,5 +1,5 @@
 import configparser
-from test_suites import project_directory
+from test_cases import project_directory
 
 
 # Initialize the configparser

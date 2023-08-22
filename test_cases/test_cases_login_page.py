@@ -2,7 +2,7 @@ import unittest
 import HtmlTestRunner
 from test_cases.test_base import TestBase
 from pages.login_page_class import LoginPage
-from test_cases import project_directory
+from test_suites import project_directory
 
 
 class TestLoginPage(TestBase):

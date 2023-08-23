@@ -11,9 +11,9 @@
         <div class="row">
             <div class="col-xs-12">
                 <h2 class="text-capitalize">Python-Unittest-Automation-Framework</h2>
-                <p class='attribute'><strong>Start Time: </strong>2023-08-22 22:11:25</p>
-                <p class='attribute'><strong>Duration: </strong>10.06 s</p>
-                <p class='attribute'><strong>Summary: </strong>Total: 1, Pass: 1</p>
+                <p class='attribute'><strong>Start Time: </strong>2023-08-23 19:00:06</p>
+                <p class='attribute'><strong>Duration: </strong>12.35 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 1, Pass: 0, Error: 1</p>
             </div>
         </div>
         <div class="row">
@@ -27,10 +27,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class='success'>
+                        <tr class='warning'>
                             <td class="col-xs-10">test_successful_login</td>
                             <td class="col-xs-1">
-                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
                             </td>
                             <td class="col-xs-1">
                                 <button class="btn btn-default btn-xs">View</button>
@@ -38,12 +38,20 @@
                         </tr>
                         <tr style="display:none;">
                             <td class="col-xs-9" colspan="3"><p>Dashboard / nopCommerce administration
+Current Test Case Name is  test_successful_login
+E:\PythonFramework\PythonUnitTestFrameWork\reporting\screenshots\Test_execution_2023-08-23_19-00-19\test_successful_login.png
+</p><p style="color:maroon;">AttributeError: 'TestLoginPage' object has no attribute 'save_screenshot'</p><p style="color:maroon;">Traceback (most recent call last):
+  File "E:\PythonFramework\PythonUnitTestFrameWork\test_cases\test_base.py", line 23, in tearDown
+    bc.capture_screenshot(current_test_name)
+  File "E:\PythonFramework\PythonUnitTestFrameWork\utility\base.py", line 57, in capture_screenshot
+    self.driver.save_screenshot(screenshot_path)
+AttributeError: 'TestLoginPage' object has no attribute 'save_screenshot'
 </p>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="3">
-                                Total: 1, Pass: 1 -- Duration: 10.06 s
+                                Total: 1, Pass: 0, Error: 1 -- Duration: 12.35 s
                             </td>
                         </tr>
                     </tbody>

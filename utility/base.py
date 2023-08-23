@@ -1,8 +1,10 @@
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as ec
 from selenium.common.exceptions import TimeoutException
 import time
+import os
 from utility.config_reader import ConfigReader
+from test_suites import project_directory
 
 
 class BaseClass:
@@ -17,7 +19,7 @@ class BaseClass:
 
         try:
             element = WebDriverWait(self.driver, timeout).until(
-                EC.presence_of_element_located(locator)
+                ec.presence_of_element_located(locator)
             )
             return element
         except TimeoutException:
@@ -38,8 +40,4 @@ class BaseClass:
         element.clear()
         element.send_keys(text)
 
-    def take_screenshot(self, screenshot_name):
-        timestamp = time.strftime('%Y%m%d%H%M%S')
-        screenshot_path = f"Reporting/Screenshots/{screenshot_name}_{timestamp}.png"
-        self.driver.save_screenshot(screenshot_path)
-        return screenshot_path
+

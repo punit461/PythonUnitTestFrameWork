@@ -50,3 +50,6 @@ class ConfigReader:
             return self.get_value('Paths', 'edgeD_path')
         else:
             return self.get_value('Paths', 'D_path')
+
+    def read_ss_config(self):
+        return self.get_value('Automation', 'screenshot_mode')

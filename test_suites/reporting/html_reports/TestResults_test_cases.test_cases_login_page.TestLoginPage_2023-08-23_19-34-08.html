@@ -11,9 +11,9 @@
         <div class="row">
             <div class="col-xs-12">
                 <h2 class="text-capitalize">Python-Unittest-Automation-Framework</h2>
-                <p class='attribute'><strong>Start Time: </strong>2023-08-22 16:00:50</p>
-                <p class='attribute'><strong>Duration: </strong>11.57 s</p>
-                <p class='attribute'><strong>Summary: </strong>Total: 1, Pass: 1</p>
+                <p class='attribute'><strong>Start Time: </strong>2023-08-23 19:34:08</p>
+                <p class='attribute'><strong>Duration: </strong>23.02 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 2, Pass: 1, Fail: 1</p>
             </div>
         </div>
         <div class="row">
@@ -27,6 +27,42 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_failure_login</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Dashboard / nopCommerce administration
+Current Test Case Name is  test_failure_login
+E:\PythonFramework\PythonUnitTestFrameWork\reporting\screenshots\Test_execution_2023-08-23_19-34-33\test_failure_login.png
+</p><p style="color:maroon;">AssertionError: 'Dashboard / nopCommerce administration' != 'Fail'
+- Dashboard / nopCommerce administration
++ Fail
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "E:\PythonFramework\PythonUnitTestFrameWork\utility\custom_logger.py", line 35, in wrapper
+    raise e
+  File "E:\PythonFramework\PythonUnitTestFrameWork\utility\custom_logger.py", line 29, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\PythonFramework\PythonUnitTestFrameWork\test_cases\test_cases_login_page.py", line 33, in test_failure_login
+    self.assertEqual(self.driver.title, "Fail")
+  File "C:\python\lib\unittest\case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python\lib\unittest\case.py", line 1226, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\python\lib\unittest\case.py", line 675, in fail
+    raise self.failureException(msg)
+AssertionError: 'Dashboard / nopCommerce administration' != 'Fail'
+- Dashboard / nopCommerce administration
++ Fail
+
+</p>
+                            </td>
+                        </tr>
                         <tr class='success'>
                             <td class="col-xs-10">test_successful_login</td>
                             <td class="col-xs-1">
@@ -38,12 +74,14 @@
                         </tr>
                         <tr style="display:none;">
                             <td class="col-xs-9" colspan="3"><p>Dashboard / nopCommerce administration
+Current Test Case Name is  test_successful_login
+E:\PythonFramework\PythonUnitTestFrameWork\reporting\screenshots\Test_execution_2023-08-23_19-34-18\test_successful_login.png
 </p>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="3">
-                                Total: 1, Pass: 1 -- Duration: 11.57 s
+                                Total: 2, Pass: 1, Fail: 1 -- Duration: 23.02 s
                             </td>
                         </tr>
                     </tbody>

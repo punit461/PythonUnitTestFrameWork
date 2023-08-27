@@ -1,0 +1,196 @@
+2023-08-25 12:08:39 - INFO - test_successful_login completed successfully.
+2023-08-25 12:08:39 - INFO - Finished test: test_successful_login
+2023-08-25 12:08:54 - ERROR - Test test_failure_login FAILED
+2023-08-25 12:08:54 - ERROR - 'Dashboard / nopCommerce administration' != 'Fail'
+- Dashboard / nopCommerce administration
++ Fail
+Traceback (most recent call last):
+  File "E:\PythonFramework\PythonUnitTestFrameWork\utility\custom_logger.py", line 39, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\PythonFramework\PythonUnitTestFrameWork\test_cases\test_cases_login_page.py", line 33, in test_failure_login
+    self.assertEqual(self.driver.title, "Fail")
+  File "C:\python\lib\unittest\case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python\lib\unittest\case.py", line 1226, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\python\lib\unittest\case.py", line 675, in fail
+    raise self.failureException(msg)
+AssertionError: 'Dashboard / nopCommerce administration' != 'Fail'
+- Dashboard / nopCommerce administration
++ Fail
+
+2023-08-25 12:08:54 - INFO - Finished test: test_failure_login
+2023-08-27 16:45:45 - ERROR - Test test_global_search_product_attribute FAILED
+2023-08-27 16:45:45 - ERROR - No section: 'global_search'
+Traceback (most recent call last):
+  File "E:\PythonFramework\PythonUnitTestFrameWork\utility\custom_logger.py", line 39, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\PythonFramework\PythonUnitTestFrameWork\test_cases\test_cases_login_page.py", line 39, in test_global_search_product_attribute
+    search_txt = self.read_test_data.read_ini(r".\test_data\configurations\test_data_dp_page.ini", "global_search", "search_text_pa")
+  File "E:\PythonFramework\PythonUnitTestFrameWork\utility\test_data_reader.py", line 24, in read_ini
+    return config.get(section, option)
+  File "C:\python\lib\configparser.py", line 782, in get
+    d = self._unify_values(section, vars)
+  File "C:\python\lib\configparser.py", line 1153, in _unify_values
+    raise NoSectionError(section) from None
+configparser.NoSectionError: No section: 'global_search'
+2023-08-27 16:45:45 - INFO - Finished test: test_global_search_product_attribute
+2023-08-27 16:48:07 - INFO - test_global_search_product_attribute completed successfully.
+2023-08-27 16:48:07 - INFO - Finished test: test_global_search_product_attribute
+2023-08-27 16:52:56 - ERROR - Test test_fail_global_search_product_attribute FAILED
+2023-08-27 16:52:56 - ERROR - False is not true
+Traceback (most recent call last):
+  File "E:\PythonFramework\PythonUnitTestFrameWork\utility\custom_logger.py", line 39, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\PythonFramework\PythonUnitTestFrameWork\test_cases\test_cases_login_page.py", line 66, in test_fail_global_search_product_attribute
+    self.assertTrue(self.driver.title.__contains__("Fail"))
+  File "C:\python\lib\unittest\case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+2023-08-27 16:52:56 - INFO - Finished test: test_fail_global_search_product_attribute
+2023-08-27 22:58:19 - INFO - test_add_customer completed successfully.
+2023-08-27 22:58:19 - INFO - Finished test: test_add_customer
+2023-08-27 23:03:22 - INFO - test_successful_login completed successfully.
+2023-08-27 23:03:22 - INFO - Finished test: test_successful_login
+2023-08-27 23:03:37 - ERROR - Test test_failure_login FAILED
+2023-08-27 23:03:37 - ERROR - 'Dashboard / nopCommerce administration' != 'Fail'
+- Dashboard / nopCommerce administration
++ Fail
+Traceback (most recent call last):
+  File "E:\PythonFramework\PythonUnitTestFrameWork\utility\custom_logger.py", line 39, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\PythonFramework\PythonUnitTestFrameWork\test_cases\test_cases_login_page.py", line 34, in test_failure_login
+    self.assertEqual(self.driver.title, "Fail")
+  File "C:\python\lib\unittest\case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python\lib\unittest\case.py", line 1226, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\python\lib\unittest\case.py", line 675, in fail
+    raise self.failureException(msg)
+AssertionError: 'Dashboard / nopCommerce administration' != 'Fail'
+- Dashboard / nopCommerce administration
++ Fail
+
+2023-08-27 23:03:37 - INFO - Finished test: test_failure_login
+2023-08-27 23:03:46 - INFO - test_global_search_product_attribute completed successfully.
+2023-08-27 23:03:46 - INFO - Finished test: test_global_search_product_attribute
+2023-08-27 23:04:00 - ERROR - Test test_fail_global_search_product_attribute FAILED
+2023-08-27 23:04:00 - ERROR - False is not true
+Traceback (most recent call last):
+  File "E:\PythonFramework\PythonUnitTestFrameWork\utility\custom_logger.py", line 39, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\PythonFramework\PythonUnitTestFrameWork\test_cases\test_cases_login_page.py", line 66, in test_fail_global_search_product_attribute
+    self.assertTrue(self.driver.title.__contains__("Fail"))
+  File "C:\python\lib\unittest\case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+2023-08-27 23:04:00 - INFO - Finished test: test_fail_global_search_product_attribute
+2023-08-27 23:04:07 - ERROR - Test test_add_customer FAILED
+2023-08-27 23:04:07 - ERROR - Message: element not interactable
+  (Session info: chrome=116.0.5845.111)
+Stacktrace:
+	GetHandleVerifier [0x00007FF70A6352A2+57122]
+	(No symbol) [0x00007FF70A5AEA92]
+	(No symbol) [0x00007FF70A47E25D]
+	(No symbol) [0x00007FF70A4B8E97]
+	(No symbol) [0x00007FF70A4AF25F]
+	(No symbol) [0x00007FF70A4D6FDA]
+	(No symbol) [0x00007FF70A4AEB76]
+	(No symbol) [0x00007FF70A4D71F0]
+	(No symbol) [0x00007FF70A4EEB82]
+	(No symbol) [0x00007FF70A4D6DB3]
+	(No symbol) [0x00007FF70A4AD2B1]
+	(No symbol) [0x00007FF70A4AE494]
+	GetHandleVerifier [0x00007FF70A8DEF82+2849794]
+	GetHandleVerifier [0x00007FF70A931D24+3189156]
+	GetHandleVerifier [0x00007FF70A92ACAF+3160367]
+	GetHandleVerifier [0x00007FF70A6C6D06+653702]
+	(No symbol) [0x00007FF70A5BA208]
+	(No symbol) [0x00007FF70A5B62C4]
+	(No symbol) [0x00007FF70A5B63F6]
+	(No symbol) [0x00007FF70A5A67A3]
+	BaseThreadInitThunk [0x00007FF867A9257D+29]
+	RtlUserThreadStart [0x00007FF8686CAA68+40]
+Traceback (most recent call last):
+  File "E:\PythonFramework\PythonUnitTestFrameWork\utility\custom_logger.py", line 39, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\PythonFramework\PythonUnitTestFrameWork\test_cases\test_cases_customer_page.py", line 36, in test_add_customer
+    customer_page.click_customer_submenu()
+  File "E:\PythonFramework\PythonUnitTestFrameWork\pages\add_customer_page_class.py", line 14, in click_customer_submenu
+    self.click_element(ACLocators.lnkCustomers_menuitem)
+  File "E:\PythonFramework\PythonUnitTestFrameWork\utility\base.py", line 32, in click_element
+    element.click()
+  File "E:\PythonFramework\PythonUnitTestFrameWork\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "E:\PythonFramework\PythonUnitTestFrameWork\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "E:\PythonFramework\PythonUnitTestFrameWork\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "E:\PythonFramework\PythonUnitTestFrameWork\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=116.0.5845.111)
+Stacktrace:
+	GetHandleVerifier [0x00007FF70A6352A2+57122]
+	(No symbol) [0x00007FF70A5AEA92]
+	(No symbol) [0x00007FF70A47E25D]
+	(No symbol) [0x00007FF70A4B8E97]
+	(No symbol) [0x00007FF70A4AF25F]
+	(No symbol) [0x00007FF70A4D6FDA]
+	(No symbol) [0x00007FF70A4AEB76]
+	(No symbol) [0x00007FF70A4D71F0]
+	(No symbol) [0x00007FF70A4EEB82]
+	(No symbol) [0x00007FF70A4D6DB3]
+	(No symbol) [0x00007FF70A4AD2B1]
+	(No symbol) [0x00007FF70A4AE494]
+	GetHandleVerifier [0x00007FF70A8DEF82+2849794]
+	GetHandleVerifier [0x00007FF70A931D24+3189156]
+	GetHandleVerifier [0x00007FF70A92ACAF+3160367]
+	GetHandleVerifier [0x00007FF70A6C6D06+653702]
+	(No symbol) [0x00007FF70A5BA208]
+	(No symbol) [0x00007FF70A5B62C4]
+	(No symbol) [0x00007FF70A5B63F6]
+	(No symbol) [0x00007FF70A5A67A3]
+	BaseThreadInitThunk [0x00007FF867A9257D+29]
+	RtlUserThreadStart [0x00007FF8686CAA68+40]
+
+2023-08-27 23:04:07 - INFO - Finished test: test_add_customer
+2023-08-27 23:06:13 - INFO - test_add_customer completed successfully.
+2023-08-27 23:06:13 - INFO - Finished test: test_add_customer
+2023-08-27 23:06:38 - INFO - test_successful_login completed successfully.
+2023-08-27 23:06:38 - INFO - Finished test: test_successful_login
+2023-08-27 23:06:50 - ERROR - Test test_failure_login FAILED
+2023-08-27 23:06:50 - ERROR - 'Dashboard / nopCommerce administration' != 'Fail'
+- Dashboard / nopCommerce administration
++ Fail
+Traceback (most recent call last):
+  File "E:\PythonFramework\PythonUnitTestFrameWork\utility\custom_logger.py", line 39, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\PythonFramework\PythonUnitTestFrameWork\test_cases\test_cases_login_page.py", line 34, in test_failure_login
+    self.assertEqual(self.driver.title, "Fail")
+  File "C:\python\lib\unittest\case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python\lib\unittest\case.py", line 1226, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\python\lib\unittest\case.py", line 675, in fail
+    raise self.failureException(msg)
+AssertionError: 'Dashboard / nopCommerce administration' != 'Fail'
+- Dashboard / nopCommerce administration
++ Fail
+
+2023-08-27 23:06:50 - INFO - Finished test: test_failure_login
+2023-08-27 23:07:02 - INFO - test_global_search_product_attribute completed successfully.
+2023-08-27 23:07:02 - INFO - Finished test: test_global_search_product_attribute
+2023-08-27 23:07:15 - ERROR - Test test_fail_global_search_product_attribute FAILED
+2023-08-27 23:07:15 - ERROR - False is not true
+Traceback (most recent call last):
+  File "E:\PythonFramework\PythonUnitTestFrameWork\utility\custom_logger.py", line 39, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\PythonFramework\PythonUnitTestFrameWork\test_cases\test_cases_login_page.py", line 66, in test_fail_global_search_product_attribute
+    self.assertTrue(self.driver.title.__contains__("Fail"))
+  File "C:\python\lib\unittest\case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+2023-08-27 23:07:15 - INFO - Finished test: test_fail_global_search_product_attribute
+2023-08-27 23:07:28 - INFO - test_add_customer completed successfully.
+2023-08-27 23:07:28 - INFO - Finished test: test_add_customer

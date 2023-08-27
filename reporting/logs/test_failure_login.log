@@ -1,10 +1,10 @@
-2023-08-23 19:37:32 - INFO - Starting test: test_failure_login
-2023-08-23 19:37:34 - ERROR - Test test_failure_login FAILED
-2023-08-23 19:37:34 - ERROR - 'Dashboard / nopCommerce administration' != 'Fail'
+2023-08-25 12:00:49 - INFO - Starting test: test_failure_login
+2023-08-25 12:00:54 - ERROR - Test test_failure_login FAILED
+2023-08-25 12:00:54 - ERROR - 'Dashboard / nopCommerce administration' != 'Fail'
 - Dashboard / nopCommerce administration
 + Fail
 Traceback (most recent call last):
-  File "E:\PythonFramework\PythonUnitTestFrameWork\utility\custom_logger.py", line 29, in wrapper
+  File "E:\PythonFramework\PythonUnitTestFrameWork\utility\custom_logger.py", line 43, in wrapper
     result = func(*args, **kwargs)
   File "E:\PythonFramework\PythonUnitTestFrameWork\test_cases\test_cases_login_page.py", line 33, in test_failure_login
     self.assertEqual(self.driver.title, "Fail")
@@ -18,4 +18,4 @@ AssertionError: 'Dashboard / nopCommerce administration' != 'Fail'
 - Dashboard / nopCommerce administration
 + Fail
 
-2023-08-23 19:37:34 - INFO - Finished test: test_failure_login
+2023-08-25 12:00:54 - INFO - Finished test: test_failure_login

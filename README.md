@@ -19,6 +19,64 @@ The project is structured as follows:
 - `.idea`: IDE-specific settings (created by the IDE).
 - `venv`: Virtual environment directory.
 
+### Project Tree
+``` tree -O
+PythonUnitTestFrameWork
+│   README.md
+│   __init__.py
+│
+│
+├───configurations
+│       config.ini
+│
+├───drivers
+│       chromedriver.exe
+│       geckodriver.exe
+│       msedgedriver.exe
+│
+├───locators
+│       login_page_locators.py
+│       __init__.py
+│   
+│
+├───pages
+│       login_page_class.py
+│       __init__.py
+│
+├───reporting
+│   ├───html_reports
+│   │       TestResults_test_cases.{test_cases_login_page.TestLoginPage_{yyyy-MM-DD_hh-mm-ss}.html
+│   │
+│   ├───logs
+│   │       logs.log
+│   │       test_{test_method_name}.log
+│   │
+│   └───screenshots
+│       └───Test_execution_2023-08-25
+│               test_{test_method_name}_{yyyy-MM-DD_hh-mm-ss}.png
+│
+├───test_cases
+│       test_base.py
+│       test_cases_login_page.py
+│       __init__.py
+│    
+│
+├───test_data
+│		test_data_homepage.json
+│
+├───test_suites
+│       test_suite_login_page.py
+│       __init__.py
+│   
+│
+└───utility
+        base.py
+        config_reader.py
+        custom_logger.py
+        driver_manager.py
+        __init__.py
+```
+
 ## Getting Started
 
 1. Clone this repository to your local machine.

@@ -51,5 +51,8 @@ class ConfigReader:
         else:
             return self.get_value('Paths', 'D_path')
 
-    def read_ss_config(self):
+    def get_ss_mode(self):
         return self.get_value('Automation', 'screenshot_mode')
+
+    def get_log_mode(self):
+        return self.get_value('Automation', 'log_mode')

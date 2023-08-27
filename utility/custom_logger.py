@@ -3,12 +3,22 @@ import logging
 import os
 import time
 from test_suites import project_directory
+from utility.config_reader import ConfigReader
+
+config_reader = ConfigReader()
 
 
 def setup_custom_logger(name):
     log_dir = str(project_directory + r"\reporting\logs")
     os.makedirs(log_dir, exist_ok=True)
-    log_file = os.path.join(log_dir, f'{name}.log')
+
+    # Read log_mode and generate logs based on it.
+    log_mode = config_reader.get_log_mode()
+
+    if log_mode == "each_test_case_log_file":
+        log_file = os.path.join(log_dir, f'{name}.log')
+    else:
+        log_file = os.path.join(log_dir, 'logs.log')
 
     formatter = logging.Formatter(fmt='%(asctime)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
     handler = logging.FileHandler(log_file)
@@ -23,7 +33,7 @@ def logmethod(func):
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
         logger = setup_custom_logger(func.__name__)
-        logger.info(f"Starting test: {func.__name__}")
+
 
         try:
             result = func(*args, **kwargs)
@@ -39,19 +49,13 @@ def logmethod(func):
     return wrapper
 
 
-def take_screenshot(self, screenshot_name):
-    timestamp = time.strftime('%Y%m%d%H%M%S')
-    screenshot_path = f"reporting/screenshots/{screenshot_name}_{timestamp}.png"
-    self.driver.save_screenshot(screenshot_path)
-    return screenshot_path
-
-
 def capture_screenshot(self, name):
+    datestamp = time.strftime("%Y-%m-%d")
     timestamp = time.strftime("%Y-%m-%d_%H-%M-%S")
-    folder_name = f'Test_execution_{timestamp}'
+    folder_name = f'Test_execution_{datestamp}'
     screenshot_dir = project_directory + "\\reporting\screenshots\\" + folder_name
     # screenshot_dir = os.path.join(os.getcwd(), 'reporting', 'screenshots', folder_name)
     os.makedirs(screenshot_dir, exist_ok=True)
-    screenshot_path = os.path.join(screenshot_dir, f'{name}.png')
+    screenshot_path = os.path.join(screenshot_dir, f'{name}_{timestamp}.png')
     # print(screenshot_path)
     self.driver.save_screenshot(screenshot_path)

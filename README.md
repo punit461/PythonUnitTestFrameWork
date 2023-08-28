@@ -90,7 +90,7 @@ PythonUnitTestFrameWork
 9. Run tests using `python -m unittest discover TestSuites`.
 
 ## _Tools & Technologies Used_
-_Python_, _Selenium_, _unittest_, _Allure_.
+_Python_, _Selenium_, _unittest_.
 
 ## Running Tests
 

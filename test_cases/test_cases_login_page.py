@@ -19,8 +19,6 @@ class TestLoginPage(TestBase):
         # Add assertions to verify successful login
         self.assertEqual(self.driver.title, "Dashboard / nopCommerce administration")
 
-        # print(tracemalloc.take_snapshot().statistics('lineno'))
-
     @logmethod
     def test_failure_login(self):
         print("Verify Login Functionality of NopCommerce WebApp")

@@ -194,3 +194,40 @@ AssertionError: False is not true
 2023-08-27 23:07:15 - INFO - Finished test: test_fail_global_search_product_attribute
 2023-08-27 23:07:28 - INFO - test_add_customer completed successfully.
 2023-08-27 23:07:28 - INFO - Finished test: test_add_customer
+2023-09-19 10:53:03 - INFO - test_successful_login completed successfully.
+2023-09-19 10:53:03 - INFO - Finished test: test_successful_login
+2023-09-19 10:53:15 - ERROR - Test test_failure_login FAILED
+2023-09-19 10:53:15 - ERROR - 'Dashboard / nopCommerce administration' != 'Fail'
+- Dashboard / nopCommerce administration
++ Fail
+Traceback (most recent call last):
+  File "E:\PythonFramework\PythonUnitTestFrameWork\utility\custom_logger.py", line 38, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\PythonFramework\PythonUnitTestFrameWork\test_cases\test_cases_login_page.py", line 32, in test_failure_login
+    self.assertEqual(self.driver.title, "Fail")
+  File "C:\python\lib\unittest\case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python\lib\unittest\case.py", line 1226, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\python\lib\unittest\case.py", line 675, in fail
+    raise self.failureException(msg)
+AssertionError: 'Dashboard / nopCommerce administration' != 'Fail'
+- Dashboard / nopCommerce administration
++ Fail
+
+2023-09-19 10:53:15 - INFO - Finished test: test_failure_login
+2023-09-19 10:53:24 - INFO - test_global_search_product_attribute completed successfully.
+2023-09-19 10:53:24 - INFO - Finished test: test_global_search_product_attribute
+2023-09-19 10:53:37 - ERROR - Test test_fail_global_search_product_attribute FAILED
+2023-09-19 10:53:37 - ERROR - False is not true
+Traceback (most recent call last):
+  File "E:\PythonFramework\PythonUnitTestFrameWork\utility\custom_logger.py", line 38, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\PythonFramework\PythonUnitTestFrameWork\test_cases\test_cases_login_page.py", line 64, in test_fail_global_search_product_attribute
+    self.assertTrue(self.driver.title.__contains__("Fail"))
+  File "C:\python\lib\unittest\case.py", line 687, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+2023-09-19 10:53:37 - INFO - Finished test: test_fail_global_search_product_attribute
+2023-09-19 10:53:49 - INFO - test_add_customer completed successfully.
+2023-09-19 10:53:49 - INFO - Finished test: test_add_customer

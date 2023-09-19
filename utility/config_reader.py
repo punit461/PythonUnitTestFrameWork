@@ -4,7 +4,7 @@ from test_cases import project_directory
 
 # Initialize the configparser
 class ConfigReader:
-    def __init__(self, config_path=project_directory + '\configurations\config.ini'):
+    def __init__(self, config_path=project_directory + r'\configurations\config.ini'):
         self.config = configparser.ConfigParser()
         self.config.read(config_path)
 
@@ -13,15 +13,15 @@ class ConfigReader:
 
     # Read data from the 'URLs' section
     def get_baseurl(self):
-        baseEnv = self.get_value('URLs', 'baseEnv')
-        if baseEnv == "testEnv":
-            return self.get_value('URLs', 'testEnv')
-        elif baseEnv == "devEnv":
-            return self.get_value('URLs', 'devEnv')
-        elif baseEnv == "stageEnv":
-            return self.get_value('URLs', 'stageEnv')
+        base_env = self.get_value('URLs', 'base_env')
+        if base_env == "test_env":
+            return self.get_value('URLs', 'test_env')
+        elif base_env == "dev_env":
+            return self.get_value('URLs', 'dev_env')
+        elif base_env == "stage_env":
+            return self.get_value('URLs', 'stage_env')
         else:
-            return self.get_value('URLs', 'prodEnv')
+            return self.get_value('URLs', 'prod_env')
 
     # Read data from the 'Credentials' section
     def get_username(self):
@@ -40,13 +40,13 @@ class ConfigReader:
     def get_browser_headless(self):
         return self.get_value('Settings', 'headless')
 
-    # should be depricated Since the Selenium manager only manages the driver from Selenium 4.6
-    def get_browser_path(self, browserName):
-        if browserName.lower() == 'chrome':
+    # should be deprecated Since the Selenium manager only manages the driver from Selenium 4.6
+    def get_browser_path(self, browser_name):
+        if browser_name.lower() == 'chrome':
             return self.get_value('Paths', 'chromeD_path')
-        elif browserName.lower == 'firefox':
+        elif browser_name.lower == 'firefox':
             return self.get_value('Paths', 'firefoxD_path')
-        elif browserName.lower == 'edge':
+        elif browser_name.lower == 'edge':
             return self.get_value('Paths', 'edgeD_path')
         else:
             return self.get_value('Paths', 'D_path')

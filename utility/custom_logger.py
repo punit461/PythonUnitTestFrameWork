@@ -34,7 +34,6 @@ def logmethod(func):
     def wrapper(*args, **kwargs):
         logger = setup_custom_logger(func.__name__)
 
-
         try:
             result = func(*args, **kwargs)
             logger.info(f"{func.__name__} completed successfully.")
@@ -53,8 +52,8 @@ def capture_screenshot(self, name):
     datestamp = time.strftime("%Y-%m-%d")
     timestamp = time.strftime("%Y-%m-%d_%H-%M-%S")
     folder_name = f'Test_execution_{datestamp}'
-    screenshot_dir = project_directory + "\\reporting\screenshots\\" + folder_name
-    # screenshot_dir = os.path.join(os.getcwd(), 'reporting', 'screenshots', folder_name)
+    # screenshot_dir = project_directory + r"\\reporting\screenshots\\" + folder_name
+    screenshot_dir = os.path.join(project_directory, 'reporting', 'screenshots', folder_name)
     os.makedirs(screenshot_dir, exist_ok=True)
     screenshot_path = os.path.join(screenshot_dir, f'{name}_{timestamp}.png')
     # print(screenshot_path)

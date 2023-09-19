@@ -1,14 +1,14 @@
-#imports from libs
+# imports from libs
 import os
 import sys
 import unittest
-from HtmlTestRunner import HTMLTestRunner
+
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-#Imports of user created modules
+# Imports of user created modules
+from HtmlTestRunner import HTMLTestRunner
 from test_cases.test_cases_login_page import TestLoginPage
 from test_cases.test_cases_customer_page import TestCustomerPage
-from test_suites import project_directory
 
 
 def sanity_suite():
